@@ -1,12 +1,18 @@
 # app-seguranca-server
 
-Grails server com mysql
+Grails REST server com mysql
 
-Dados configurados para acessar o mysql do grails:
+# Configuração Banco
 
 user: root
 
 password: 12345678
+
+# Listar dados
+
+http://localhost:8080/resposta
+
+# Inserir dados
 
 Para inserir os dados mandar uma requisição POST com as respostas contidas no paramento respostas no body da mensagem.
 
