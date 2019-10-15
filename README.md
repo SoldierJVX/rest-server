@@ -3,6 +3,7 @@
 Grails server com mysql
 
 Dados configurados para acessar o mysql do grails:
+
 user: root
 password: 12345678
 
