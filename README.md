@@ -14,7 +14,7 @@ http://localhost:8080/resposta
 
 # Inserir dados
 
-Para inserir os dados mandar uma requisição POST com as respostas contidas no paramento 'respostas' no body da mensagem.
+Para inserir os dados mandar uma requisição POST com as respostas contidas no paramento ''respostas'' no body da mensagem.
 
 # Exemplo de inserção via CURL:
 
