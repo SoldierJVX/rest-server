@@ -1,4 +1,4 @@
-# app-seguranca-server
+# rest-server
 
 Grails REST server com mysql
 
@@ -8,7 +8,7 @@ user: root
 
 password: 12345678
 
-database: segurança
+database: server
 
 # Listar dados
 
