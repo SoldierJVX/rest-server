@@ -88,15 +88,15 @@ environments:
     development:
         dataSource:
             dbCreate: create-drop
-            url: jdbc:mysql://localhost:3306/server
+            url: jdbc:mysql://localhost:3306/server?useSSL=false
     test:
         dataSource:
             dbCreate: update
-            url: jdbc:mysql://localhost:3306/server
+            url: jdbc:mysql://localhost:3306/server?useSSL=false
     production:
         dataSource:
             dbCreate: none
-            url: jdbc:mysql://localhost:3306/server
+            url: jdbc:mysql://localhost:3306/server?useSSL=false
             properties:
                 jmxEnabled: true
                 initialSize: 5
