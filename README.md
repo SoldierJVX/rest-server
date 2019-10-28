@@ -1,14 +1,14 @@
 # rest-server
 
-Grails REST server com mysql
+Grails REST server com h2
 
 # Configuração Banco
 
-user: root
+user: sa
 
-password: 12345678
+password:
 
-database: server
+database: jdbc:h2:mem:devDB
 
 # Listar dados
 
