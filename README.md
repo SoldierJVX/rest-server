@@ -2,6 +2,10 @@
 
 Grails REST server com h2
 
+# Executar servidor
+
+grails run-app
+
 # Configuração Banco
 
 user: sa
