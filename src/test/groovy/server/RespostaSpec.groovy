@@ -11,8 +11,4 @@ class RespostaSpec extends Specification implements DomainUnitTest<Resposta> {
     def cleanup() {
     }
 
-    void "test something"() {
-        expect:"fix me"
-            true == false
-    }
 }
