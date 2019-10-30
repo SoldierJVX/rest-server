@@ -21,7 +21,6 @@ plugins {
 version "0.1"
 group "server"
 
-apply plugin: "spring-boot"
 apply plugin: "asset-pipeline"
 apply plugin:"eclipse"
 apply plugin:"idea"
