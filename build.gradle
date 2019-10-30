@@ -1,54 +1,25 @@
 buildscript {
-    ext {
-        grailsVersion = project.grailsVersion
-    }
     repositories {
-        mavenLocal()
         maven { url "https://repo.grails.org/grails/core" }
     }
     dependencies {
         classpath "org.grails:grails-gradle-plugin:$grailsVersion"
         classpath "org.grails.plugins:hibernate5:7.0.0"
         classpath "org.grails.plugins:views-gradle:2.0.0.BUILD-SNAPSHOT"
-        classpath 'com.bertramlabs.plugins:asset-pipeline-gradle:2.1.1'
     }
-}
-
-plugins {
-    id "io.spring.dependency-management" version "0.4.0.RELEASE"
 }
 
 version "0.1"
 group "server"
 
-apply plugin: "asset-pipeline"
 apply plugin:"eclipse"
 apply plugin:"idea"
 apply plugin:"war"
 apply plugin:"org.grails.grails-web"
 apply plugin:"org.grails.plugins.views-json"
-apply plugin: "org.grails.grails-gsp"
-
-ext {
-    grailsVersion = project.grailsVersion
-    gradleWrapperVersion = project.gradleWrapperVersion
-}
-
-assets {
-    minifyJs = true
-    minifyCss = true
-}
 
 repositories {
-    mavenLocal()
     maven { url "https://repo.grails.org/grails/core" }
-}
-
-dependencyManagement {
-    imports {
-        mavenBom "org.grails:grails-bom:$grailsVersion"
-    }
-    applyMavenExclusions false
 }
 
 configurations {
@@ -95,20 +66,6 @@ dependencies {
     testCompile "org.mockito:mockito-core"
     testCompile "io.micronaut:micronaut-http-client"
     testCompile "org.grails:grails-web-testing-support"
-    testCompile "org.grails:grails-plugin-testing"
-    testCompile "org.grails.plugins:geb"
-
-    testRuntime 'org.seleniumhq.selenium:selenium-htmlunit-driver:2.44.0'
-
-    compile "org.grails:grails-dependencies"
-    compile "org.hibernate:hibernate-ehcache"
-
-    runtime "org.grails.plugins:asset-pipeline"
-    runtime "org.grails.plugins:scaffolding"
-
-    compile 'org.eclipse.jetty:jetty-runner:9.2.11.v20150529'
-    compile 'com.github.jsimone:webapp-runner:8.0.30.2'
-
 }
 
 bootRun {
@@ -120,10 +77,6 @@ bootRun {
     sourceResources sourceSets.main
     String springProfilesActive = 'spring.profiles.active'
     systemProperty springProfilesActive, System.getProperty(springProfilesActive)
-}
-
-task wrapper(type: Wrapper) {
-    gradleVersion = gradleWrapperVersion
 }
 
 task stage() {
@@ -145,3 +98,4 @@ task copyToLib(type: Copy) {
 }
 
 stage.dependsOn(copyToLib)
+
