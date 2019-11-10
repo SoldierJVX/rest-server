@@ -90,11 +90,11 @@ environments:
             url: jdbc:h2:mem:devDB
     test:
         dataSource:
-            dbCreate: update
+            dbCreate: create-drop
             url: jdbc:h2:mem:testDb
     production:
         dataSource:
-            dbCreate: none
+            dbCreate: create-drop
             url: jdbc:h2:file:~/.h2
             properties:
                 jmxEnabled: true
