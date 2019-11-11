@@ -1,18 +1,12 @@
-# rest-server
+# REST-server
 
 Grails REST server com h2
 
+Deploy no Heroku - https://rest-server-grails.herokuapp.com/
+
 # Executar servidor
 
-grails run-app
-
-# Configuração Banco
-
-user: sa
-
-password:
-
-database: jdbc:h2:mem:devDB
+<pre>grails run-app</pre>
 
 # Listar dados
 
@@ -24,4 +18,4 @@ Para inserir os dados mandar uma requisição POST com o header contendo a infor
 
 # Exemplo de inserção via CURL:
 
-curl -i -H "Content-Type:application/json" -X POST localhost:8080/resposta -d '{"respostas":"12345"}'
+<pre>curl -i -H "Content-Type:application/json" -X POST localhost:8080/resposta -d '{"respostas":"12345"}'</pre>
